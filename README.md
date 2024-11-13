@@ -58,17 +58,17 @@ int main(void)
 ```
 
 ------------------------------------------------------------------------------------------------------
-5. Now libft\_tester.c may be compiled and launched:
+5. tester.c may be compiled and launched:
 ```bash
 $ cc -Wall -Wextra -Werror tester.c libft_tester.a ../libft.a -o tester
 $ ./tester
 ```
 
 ------------------------------------------------------------------------------------------------------
-
-We included string.h and linked strlcpy.o and strlcat.o of FreeBSD system for testing
-strlcpy() and strlcat() functions respectively. To be able to compare the original
-functions with our own implementation.
+We included string.h and linked the strlcpy.o and strlcat.o files from
+the FreeBSD system for testing the strlcpy() and strlcat() functions,
+respectively, allowing us to compare the original functions with our own
+implementation.
 
 ## **License**
 
