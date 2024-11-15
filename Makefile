@@ -1,7 +1,8 @@
 CC=cc
 NAME=libft_tester.a
+LIBFT=libft.a
 CFLAGS=-Wall -Werror -Wextra
-BSDOBJS=libbsd/strlcat.o libbsd/strlcpy.o # Original FreeBSD functions
+BSDOBJS=bsd_strlcpy.o bsd_strlcat.o
 
 OBJS=common_tester.o libft_tester.o \
 	 isalpha.o isdigit.o isalnum.o isascii.o isprint.o \
@@ -9,22 +10,30 @@ OBJS=common_tester.o libft_tester.o \
 	 strlcpy.o strlcpy_regular.o strlcpy_special.o \
 	 strlcat.o strlcat_regular.o strlcat_special.o
 
-$(NAME) : $(OBJS) # The original FreeBSD functions don't change
+$(NAME) : $(OBJS) $(BSDOBJS)
 	cd .. && $(MAKE) all # First let's build the Libft
 	ar rcs $(NAME) $(OBJS) $(BSDOBJS) # Building Libft tester library
 
-all : libft.a $(NAME)
+# first we build libft.a and then libft_tester.a
+all : $(NAME)
 
 clean :
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BSDOBJS)
 
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
 
+# Let's compile the original strlcpy() from FreeBSD
+bsd_strlcpy.o : libbsd/bsd_strlcpy.c libbsd/bsd_string.h
+	$(CC) -c libbsd/bsd_strlcpy.c
 
+# Let's compile the original strlcat() from FreeBSD
+bsd_strlcat.o : libbsd/bsd_strlcat.c libbsd/bsd_string.h
+	$(CC) -c libbsd/bsd_strlcat.c
 
+# Let's compile all the sources of libft_tester library
 common_tester.o : common_tester/common_tester.c common_tester/common_tester.h
 	$(CC) -c common_tester/common_tester.c
 

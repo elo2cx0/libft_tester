@@ -14,6 +14,9 @@ is to the reference one.
 This simple tester was developed primarily for learning purposes, though it
 can be used or improved upon by other participants in the 42 program.
 
+
+
+
 ## **Installation and Usage**
 
 1. The libft\_tester folder must be placed in the root directory of
@@ -65,10 +68,11 @@ $ ./tester
 ```
 
 ------------------------------------------------------------------------------------------------------
-We included string.h and linked the strlcpy.o and strlcat.o files from
-the FreeBSD system for testing the strlcpy() and strlcat() functions,
-respectively, allowing us to compare the original functions with our own
-implementation.
+Files strlcpy.c, strlcat.c, and string.h from the FreeBSD system ([libbsd-0.12.2](https://sources.debian.org/src/libbsd/0.12.2-2))
+were added to the libbsd/ folder under the names bsd\_strlcpy.c, bsd\_strlcat.c,
+and bsd\_string.h for testing the strlcpy() and strlcat() functions,
+allowing us to compare the execution of the original BSD functions with that of
+our own implementations.
 
 ## **License**
 

@@ -6,7 +6,7 @@
 /*   By: dchernik <dchernik@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 19:42:27 by dchernik          #+#    #+#             */
-/*   Updated: 2024/11/13 19:42:28 by dchernik         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:00:23 by dchernik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define LIBFT_TESTER_H
 
 #include "../common_tester/common_tester.h"
-#include "../libbsd/string.h"
+#include "../libbsd/bsd_string.h"
 #include "../../libft.h"
 
 #include <ctype.h>
