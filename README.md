@@ -16,6 +16,8 @@ can be used or improved upon by other participants in the 42 program.
 
 All the code in this tester complies with the Norm coding standard.
 
+Test line
+
 ## **Installation and Usage**
 
 1. The libft\_tester folder must be placed in the root directory of
