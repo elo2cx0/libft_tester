@@ -1,6 +1,5 @@
 CC=cc
 NAME=libft_tester.a
-LIBFT=libft.a
 CFLAGS=-Wall -Werror -Wextra
 BSDOBJS=bsd_strlcpy.o bsd_strlcat.o
 
@@ -37,55 +36,55 @@ bsd_strlcat.o : libbsd/bsd_strlcat.c libbsd/bsd_string.h
 common_tester.o : common_tester/common_tester.c common_tester/common_tester.h
 	$(CC) -c common_tester/common_tester.c
 
-libft_tester.o : libft_tester.c include/libft_tester.h
-	$(CC) -c libft_tester.c
+libft_tester.o : src/libft_tester.c include/libft_tester.h
+	$(CC) -c src/libft_tester.c
 
-isalpha.o : isalpha.c include/libft_tester.h
-	$(CC) -c isalpha.c
+isalpha.o : src/isalpha.c include/libft_tester.h
+	$(CC) -c src/isalpha.c
 
-isdigit.o : isdigit.c include/libft_tester.h
-	$(CC) -c isdigit.c
+isdigit.o : src/isdigit.c include/libft_tester.h
+	$(CC) -c src/isdigit.c
 
-isalnum.o : isalnum.c include/libft_tester.h
-	$(CC) -c isalnum.c
+isalnum.o : src/isalnum.c include/libft_tester.h
+	$(CC) -c src/isalnum.c
 
-isascii.o : isascii.c include/libft_tester.h
-	$(CC) -c isascii.c
+isascii.o : src/isascii.c include/libft_tester.h
+	$(CC) -c src/isascii.c
 
-isprint.o : isprint.c include/libft_tester.h
-	$(CC) -c isprint.c
+isprint.o : src/isprint.c include/libft_tester.h
+	$(CC) -c src/isprint.c
 
-strlen.o : strlen.c include/libft_tester.h
-	$(CC) -c strlen.c
+strlen.o : src/strlen.c include/libft_tester.h
+	$(CC) -c src/strlen.c
 
-memset.o : memset.c include/libft_tester.h
-	$(CC) -c memset.c
+memset.o : src/memset.c include/libft_tester.h
+	$(CC) -c src/memset.c
 
-bzero.o : bzero.c include/libft_tester.h
-	$(CC) -c bzero.c
+bzero.o : src/bzero.c include/libft_tester.h
+	$(CC) -c src/bzero.c
 
-memcpy.o : memcpy.c include/libft_tester.h
-	$(CC) -c memcpy.c
+memcpy.o : src/memcpy.c include/libft_tester.h
+	$(CC) -c src/memcpy.c
 
-memmove.o : memmove.c include/libft_tester.h
-	$(CC) -c memmove.c
+memmove.o : src/memmove.c include/libft_tester.h
+	$(CC) -c src/memmove.c
 
-strlcpy_regular.o : strlcpy_regular.c include/strlcpy.h include/libft_tester.h
-	$(CC) -c strlcpy_regular.c
+strlcpy_regular.o : src/strlcpy_regular.c include/strlcpy.h include/libft_tester.h
+	$(CC) -c src/strlcpy_regular.c
 
-strlcpy_special.o : strlcpy_special.c include/strlcpy.h include/libft_tester.h
-	$(CC) -c strlcpy_special.c
+strlcpy_special.o : src/strlcpy_special.c include/strlcpy.h include/libft_tester.h
+	$(CC) -c src/strlcpy_special.c
 
-strlcpy.o : strlcpy.c include/strlcpy.h include/libft_tester.h
-	$(CC) -c strlcpy.c
+strlcpy.o : src/strlcpy.c include/strlcpy.h include/libft_tester.h
+	$(CC) -c src/strlcpy.c
 
-strlcat_regular.o : strlcat_regular.c include/strlcat.h include/libft_tester.h
-	$(CC) -c strlcat_regular.c
+strlcat_regular.o : src/strlcat_regular.c include/strlcat.h include/libft_tester.h
+	$(CC) -c src/strlcat_regular.c
 
-strlcat_special.o : strlcat_special.c include/strlcat.h include/libft_tester.h
-	$(CC) -c strlcat_special.c
+strlcat_special.o : src/strlcat_special.c include/strlcat.h include/libft_tester.h
+	$(CC) -c src/strlcat_special.c
 
-strlcat.o : strlcat.c include/strlcat.h include/libft_tester.h
-	$(CC) -c strlcat.c
+strlcat.o : src/strlcat.c include/strlcat.h include/libft_tester.h
+	$(CC) -c src/strlcat.c
 
 .PHONY: all clean fclean re

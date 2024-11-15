@@ -76,4 +76,9 @@ our own implementations.
 
 ## **License**
 
-This work is published under the terms of ** [42 Unlicense](https://github.com/gcamerli/42unlicense) **.
+This work is published under the terms of [42 Unlicense](https://github.com/gcamerli/42unlicense).
+
+The following files are included under thier original licenses:
+- strlcpy.c: Copyright (c) 1998, 2015 Todd C. Miller <Todd.Miller@courtesan.com>. Licensed under a permissive license.
+- strlcat.c: Copyright (c) 1998, 2015 Todd C. Miller <Todd.Miller@courtesan.com>. Licensed under a permissive license.
+- string.h:  Copyright © 2004, 2005, 2009, 2011 Guillem Jover <guillem@hadrons.org>. Licensed under the BSD 3-Clause License.
