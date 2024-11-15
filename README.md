@@ -83,7 +83,7 @@ The most common example of directory arrangement is shown below:
 ```bash
 $ make
 ```
-      
+
 The Makefile located in the libft\_tester/ directory first builds the Libft
 static library, producing libft.a in the parent libft/ directory. Then, it
 builds the Libft library tester, producing libft\_tester.a in the current
@@ -92,11 +92,11 @@ directory.
 ------------------------------------------------------------------------------------------------------
 4. Now we can start testing our Libft by invoking the launch\_tester()
 function. For instance, we can create a small program, tester.c, located
-in the libft\_tester/ directory that launches the tester:
+in the libft\_tester/examples/ directory that launches the tester:
 
 ```c
 // tester.c
-#include "include/libft_tester.h" 
+#include "../include/libft_tester.h" 
 
 int main(void)
 {
@@ -106,9 +106,9 @@ int main(void)
 ```
 
 ------------------------------------------------------------------------------------------------------
-5. tester.c may be compiled and launched:
+5. The file tester.c may be compiled and launched:
 ```bash
-$ cc -Wall -Wextra -Werror tester.c libft_tester.a ../libft.a -o tester
+$ cc -Wall -Wextra -Werror tester.c ../libft_tester.a ../../libft.a -o tester
 $ ./tester
 ```
 
