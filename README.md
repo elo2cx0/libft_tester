@@ -14,8 +14,7 @@ is to the reference one.
 This simple tester was developed primarily for learning purposes, though it
 can be used or improved upon by other participants in the 42 program.
 
-
-
+All the code in this tester complies with the Norm coding standard.
 
 ## **Installation and Usage**
 
@@ -31,8 +30,54 @@ $ pwd
 ```
 
 The most common example of directory arrangement is shown below:
-![Possible directory arrangement.](/img/directory_arrangement.png "Possible directory arrangement")
-
+```
+|parent_dir/
+|    file1
+|    ...
+|    fileN
+|    libft/ <----------------------- A directory containing our Libft source code
+|    |    ft_atoi.c <--------------- A file containing our implementation of the
+|    |    ft_bzero.c				 standard atoi() function
+|    |    ft_calloc.c
+|    |    ...
+|    |    ft_tolower.c
+|    |    ft_toupper.c
+|    |    libft.h <----------------- The Libft header file
+|    |    libft_tester/ <----------- This is our Libft library tester folder
+|    |    |    src/
+|    |    |        atoi.c <-------------- A file containing the function that tests our ft_atoi()
+|    |    |        bzero.c
+|    |    |        calloc.c
+|    |    |        isalnum.c <----------- A file containing the function that tests
+|    |    |        isalpha.c			  our ft_isalnum() function
+|    |    |        isascii.c
+|    |    |        isdigit.c
+|    |    |        isprint.c
+|    |    |        itoa.c
+|    |    |        libft_tester.c
+|    |    |        memchr.c
+|    |    |        memcmp.c
+|    |    |        ...
+|    |    |        tolower.c
+|    |    |        toupper.c
+|    |    |    common_tester/ <------ A small library containing some common testing functions
+|    |    |        common_tester.c
+|    |    |        common_tester.h
+|    |    |    include/
+|    |    |        libft_tester.h <-- The header file of the Libft Tester library
+|    |    |        split.h
+|    |    |        strlcat.h
+|    |    |        strlcpy.h
+|    |    |        ...
+|    |    |    libbsd/ <------------- A folder containing some FreeBSD's functions
+|    |    |        bsd_string.h
+|    |    |        bsd_strlcat.c
+|    |    |        bsd_strlcpy.c
+|    |    |    examples/
+|    |    |        tester.c <------------ A program that invokes lauch_tester()
+|    |    |    Makefile <------------ A makefile that builds libft_tester.a
+|    |    |Makefile <---------------- A makefile that builds libft.a
+```
 ------------------------------------------------------------------------------------------------------
 3. Then 'make' utility has to be run:
 ```bash
